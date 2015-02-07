@@ -3,7 +3,7 @@
 {% block mainContent %}
 
   {% if errors %}
-    <div class="form-errors">
+    <div class="form-errors alert alert-errors" role="alert">
       <p>Please correct the following errors!</p>
       <ul>
         {% for error in errors %}
@@ -12,35 +12,36 @@
       </ul>
     </div>
   {% endif %}
-  <h1>Fill in the details below for your new event!</h1>
-	<form id="create-event" method="POST">
-    <label for="title">Event title:</label>
-    <input type="text" name="title">
-    <p></p>
-    <label for="location">Event location:</label>
-    <input type="text" name="location">
-    <p></p>
-    <label for="image">Event image:</label>
-    <input type="text" name="image">
-    <p></p>
-    <label for="year">Event year:</label>
-    <input type="text" name="year">
-    <p></p>
-    <label for="month">Event month:</label>
-    <input type="text" name="month">
-    <p></p>
-    <label for="day">Event day:</label>
-    <input type="text" name="day">
-    <p></p>
-    <label for="hour">Event hour:</label>
-    <input type="text" name="hour">
-    <p></p>
-    <label for="minute">Event minute:</label>
-    <input type="text" name="minute">
-    <p></p>
-    <input type="submit" value="Submit">
-  </form>
-
+  <div class="input-group">
+    <h1>Fill in the details below for your new event!</h1>
+  	<form id="create-event" method="POST">
+      <label for="title">Event title:</label>
+      <input type="text" name="title" placeholder="Your event name">
+      <p></p>
+      <label for="location">Event location:</label>
+      <input type="text" name="location" placeholder="Your event venue">
+      <p></p>
+      <label for="image">Event image:</label>
+      <input type="text" name="image" placeholder="Input URL of image">
+      <p></p>
+      <label for="year">Event year:</label>
+      <input type="text" name="year" placeholder="2015-2016">
+      <p></p>
+      <label for="month">Event month:</label>
+      <input type="text" name="month" placeholder="1-12">
+      <p></p>
+      <label for="day">Event day:</label>
+      <input type="text" name="day" placeholder="1-31">
+      <p></p>
+      <label for="hour">Event hour:</label>
+      <input type="text" name="hour" placeholder="0-23">
+      <p></p>
+      <label for="minute">Event minute:</label>
+      <input type="text" name="minute" placeholder="0-59">
+      <p></p>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
 {% endblock %}
 
 
