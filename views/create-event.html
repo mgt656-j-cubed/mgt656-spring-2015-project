@@ -4,7 +4,7 @@
 
   {% if errors %}
     <div class="form-errors alert alert-danger" role="alert">
-      <p>Please correct the following errors!</p>
+      <h4>Please correct the following errors!</h4>
       <ul>
         {% for error in errors %}
           <li>{{error}}</li>
@@ -13,30 +13,38 @@
     </div>
   {% endif %}
   <div class="input-group">
-    <h1>Fill in the details below for your new event!</h1>
-  	<form id="create-event" method="POST">
-      <label for="title">Event title:</label>
-      <input type="text" name="title" placeholder="Your event name">
+    <h3>Create An Event</h3>
+    <form id="create-event" method="POST">
+      <div class="panel panel-default">
+        <div class="panel-heading"><label for="title">Event title</label></div>
+        <div class="panel-body"><input type="text" name="title" placeholder="Give it a short distinct name"></div>
+      </div>
+      <label for="location">Location</label>
       <p></p>
-      <label for="location">Event location:</label>
-      <input type="text" name="location" placeholder="Your event venue">
+      <input type="text" name="location" placeholder="Specify where it's held">
       <p></p>
-      <label for="image">Event image:</label>
-      <input type="text" name="image" placeholder="Input URL of image">
+      <label for="image">Event logo</label>
       <p></p>
-      <label for="year">Event year:</label>
+      <input type="text" name="image" placeholder="Picture = 1000 words">
+      <p></p>
+      <label for="year">Event year</label>
+      <p></p>
       <input type="text" name="year" placeholder="2015-2016">
       <p></p>
-      <label for="month">Event month:</label>
+      <label for="month">Event month</label>
+      <p></p>
       <input type="text" name="month" placeholder="1-12">
       <p></p>
-      <label for="day">Event day:</label>
+      <label for="day">Event day</label>
+      <p></p>
       <input type="text" name="day" placeholder="1-31">
       <p></p>
-      <label for="hour">Event hour:</label>
+      <label for="hour">Event hour</label>
+      <p></p>
       <input type="text" name="hour" placeholder="0-23">
       <p></p>
-      <label for="minute">Event minute:</label>
+      <label for="minute">Event minute</label>
+      <p></p>
       <input type="text" name="minute" placeholder="0-59">
       <p></p>
       <input type="submit" value="Submit">
