@@ -9,7 +9,7 @@ function index (request, response) {
   var now = new Date();
   var contextData = {
     'title': 'J-Cubed',
-    'tagline': 'We're all about events.',
+    'tagline': 'We are all about events.',
     'events': []
   };
   for(var i=0; i< events.all.length; i++) {
