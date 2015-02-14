@@ -29,6 +29,7 @@
                 "Gulp": {
                     "command": "gulp",
                     "debug": true,
+                    "env": {},
                     "name": "Gulp",
                     "runner": "Shell command"
                 }

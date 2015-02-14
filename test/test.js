@@ -242,9 +242,10 @@ describe('The event detail pages',function(){
   it('should allow Yale users to RSVP', function(done){
     var browser = new Browser();
     var email = 'foobar@YAle.edu';
-
-    browser.visit(SITE + '/events/0', function(){
+    
+    browser.visit(SITE + '/events/1', function(){
       assert.ok(browser.html().indexOf(email) === -1, 'Email ' + email + ' found before filling form at /events/0.');
+  
       browser
         .fill('email', email)
         .pressButton('Submit', function(){
@@ -258,10 +259,12 @@ describe('The event detail pages',function(){
     var browser = new Browser();
     var email = 'foobar@harvard.edu';
 
+    console.log('running test');
     browser.visit(SITE + '/events/0', function(){
       browser
         .fill('email', email)
         .pressButton('Submit', function(){
+          // console.log(browser.html());
           assert.ok(browser.query('ul.form-errors'), 'RSVP from joker at Harvard should have been rejected.');
           done();
         });
