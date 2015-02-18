@@ -4,20 +4,20 @@
     <h1 id="title">{{event.title}}</h1>
     <img id="image" src="{{event.image}}"/>    
     <p>
-        <time><span id="date" datetime="{{event.date}}">When: {{event.date|prettyDate}}</span></time>
+        <time><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><span id="date" datetime="{{event.date}}"> When: {{event.date|prettyDate}}</span></time>
     </p>
     <p>
-        <span id="location">Where: {{event.location}}</span>
+        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span><span id="location"> Where: {{event.location}}</span>
     </p>
     <p>
-    Attendees:
+    <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Attendees:
     <ul id="attendees">
         {% for person in event.attending %}
         <li>{{person}}</li>
         {% endfor %}
     </ul>
     </p>
-    <p><a href="http://www.networkforgood.org/donate/" class="donate donation">Donate to this event!</a></p>
+    <p><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span><a href="http://www.networkforgood.org/donate/" class="donate donation"> Donate to this event!</a></p>
 
   <!-- Load the Content Experiment JavaScript API client for the experiment -->
   <script src="//www.google-analytics.com/cx/api.js?experiment=RA5koCVgSySnN-KB5IBPJg"></script>
@@ -30,7 +30,7 @@
   var pageVariations = [
     function() {},  // Original: Do nothing. This will render the default HTML.
     function() {    // Variation 1: replace Donate-to with Support
-      $( 'a.donate' ).replaceWith( '<a href="http://www.networkforgood.org/donate/" class="donate donation">Support this event!</a> ' );
+      $( 'a.donate' ).replaceWith( '<a href="http://www.networkforgood.org/donate/" class="donate donation"> Support this event!</a> ' );
     }
   ];
    
@@ -59,7 +59,7 @@
   {% endif %}
 
   
-    <h2>Make a reservation here:</h2>
+    <h3>Make a reservation here:</h3>
       <form id="rsvp" method="POST">
          Enter your email: <input id="email" type="email" name="email">
          <input id="submit" type="submit" value="Submit">
